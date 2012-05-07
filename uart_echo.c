@@ -96,7 +96,7 @@ SetupHardware(void)
 
     // Enable the peripherals used by this example.
     SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOA);
-    SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOB);
+    SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOC);
     SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOD);
 
     SysCtlPeripheralEnable(SYSCTL_PERIPH_UART0);
@@ -105,10 +105,10 @@ SetupHardware(void)
     // Enable processor interrupts.
     IntMasterEnable();
 
-    // Sets B2 High.
-    GPIODirModeSet( GPIO_PORTB_BASE, GPIO_PIN_2, GPIO_DIR_MODE_OUT );
-    GPIOPadConfigSet( GPIO_PORTB_BASE, GPIO_PIN_2, GPIO_STRENGTH_2MA, GPIO_PIN_TYPE_STD );
-    GPIOPinWrite( GPIO_PORTB_BASE, GPIO_PIN_2, 0 );
+    // Sets C7 High.
+    GPIODirModeSet( GPIO_PORTC_BASE, GPIO_PIN_7, GPIO_DIR_MODE_OUT );
+    GPIOPadConfigSet( GPIO_PORTC_BASE, GPIO_PIN_7, GPIO_STRENGTH_2MA, GPIO_PIN_TYPE_STD );
+    GPIOPinWrite( GPIO_PORTC_BASE, GPIO_PIN_7, 0 );
 
 
     /************ Initialize the UART0 ************/
